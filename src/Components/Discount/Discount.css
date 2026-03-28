@@ -1,0 +1,76 @@
+.DiscountMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    background: linear-gradient(180deg,var(--amber)0%,var(--gold-pale) 100%);
+    aspect-ratio: 5 / 1;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+.imageDiscountSection {
+    width: 40%;
+    margin-right: 20px;
+    position: relative;
+}
+.imageDiscountSection img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 520px;
+}
+.textDiscountSection {
+    width: 60%;
+    background: var(--warm-white);  
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.textDiscountSection h1{
+    font-size: 5svw;
+    font-weight: 900;
+    color: #84b522;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.textDiscountSection h2{
+    font-size: 2svw;
+    font-weight: 900;
+    color: #b57322;
+    margin-top: -50px;
+    text-transform: uppercase;
+}
+.inputSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.MuiTextField-root{
+    width: 80%;
+}
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+    color: var(--amber) !important;
+}
+.css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: var(--amber) !important;
+}
+.css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input{
+    color: #84b522 !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+}
+.MuiButtonBase-root{
+    background: var(--amber) !important;
+    color: #ffffff !important;
+    height: 100%;
+    width: 20%;
+    border-radius: 30px !important;
+
+}

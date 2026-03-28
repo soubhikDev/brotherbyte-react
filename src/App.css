@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+:root {
+  --cream:        #fdf6ec;
+  --warm-white:   #fffbf5;
+  --charcoal:     #1a1410;
+  --deep-brown:   #000000;
+  --mid-brown:    #3d2414;
+  --amber:        #d60000;
+  --amber-light:  #e73636;
+  --gold:         #d44c4c;
+  --gold-pale:    #f0d898;
+  --sage:         #5a6b52;
+  --muted:        rgba(253,246,236,0.45);
+  --border:       rgba(253,246,236,0.08);
+
+    --nav-bg: rgba(2, 2, 2, 0.081);
+    --nav-bg-scrolled: rgba(0, 0, 0, 0.613);
+    --nav-border: rgba(255, 255, 255, 0.06);
+    --accent: #d60000;
+    --accent-glow: rgba(232, 255, 71, 0.25);
+    --text-primary: #f0f0f0;
+    --text-muted: #ffffff;
+    --nav-height: 72px;
+    --nav-height-scrolled: 60px;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+
+  --surface: #161616;
+  --card-bg: #f6f6f6;
+  /* --accent: #e8a847; */
+  --accent-light: #f5887a;
+  --accent-muted: rgba(232, 92, 71, 0.12);
+  --text-secondary: #7e726f;
+  --border: rgba(232, 71, 71, 0.18);
+  --glow: rgba(232, 71, 71, 0.25);
+  --radius: 20px;
+  --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  --accent2:   #c0392b;
+  --text:      #262626;
+  --muted:     #7a7570;
+  --border:    rgba(232,184,109,0.15);
+  --radius:    20px;
+}   
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+}
+
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/* Firefox */
+html {
+    scrollbar-width: none;
+    font-size: 16px;
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    -ms-overflow-style: none;
+    background: var(--bg-800);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Images */
+img {
+    width: 100%;
+    display: block;
+}
+
+/* Lists */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Buttons & Inputs */
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    border: none;
+    outline: none;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+.common_width{
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1700px;
+}

@@ -1,0 +1,529 @@
+/* ===== BASE STYLES ===== */
+.HeroMain {
+    height: 100svh;
+    overflow: hidden;
+    background: url(../../assets/HeroBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+}
+
+.HeroSub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== HERO TEXT ===== */
+.hero_text {
+    width: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero_text h1 {
+    font-size: 5svw;
+    font-weight: 900;
+    color: #fff;
+}
+
+.hero_text h2 {
+    font-size: 3svw;
+    font-weight: 600;
+    color: #ffbd2f;
+    text-transform: uppercase;
+    margin-top: -30px;
+}
+
+.hero_text h3 {
+    font-size: 4.1svw;
+    font-weight: 800;
+    color: #ff8d2f;
+    text-transform: uppercase;
+    margin-top: -40px;
+}
+
+.hero_text h4 {
+    font-size: 3.8svw;
+    font-weight: 400;
+    font-family: "Dancing Script", cursive;
+    color: #a1ff2f;
+    margin-bottom: -30px;
+}
+
+/* ===== HERO IMAGE ===== */
+.hero_img {
+    width: 50%;
+    position: relative;
+}
+
+.hero_img img {
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero_img img:nth-child(2) {
+    left: 78%;
+    transform: translate(-50%, 250%);
+    z-index: 4;
+}
+
+.hero_img img:nth-child(3) {
+    left: 2%;
+    transform: translate(-50%, -20%);
+    z-index: 4;
+}
+
+.hero_img img:nth-child(4) {
+    left: 94%;
+    transform: translate(-50%, -77%);
+    z-index: 4;
+}
+
+.hero_img .biriyani {
+    width: 100%;
+    max-width: 800px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+/* ===== DECORATIVE ELEMENTS ===== */
+.LeftCloud {
+    position: absolute;
+    left: -870px;
+    top: 50%;
+    transform: translateY(-60%);
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.RightCloud {
+    position: absolute;
+    right: -1270px;
+    top: 50%;
+    transform: translateY(-24%);
+    z-index: 0;
+    opacity: 0.7;
+}
+
+.LOnion {
+    position: absolute;
+    left: -60px;
+    top: 100%;
+    transform: translateY(-50%);
+    width: 410px;
+}
+
+.LTOnion {
+    position: absolute;
+    width: fit-content;
+    left: -9px;
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+.ROnion {
+    position: absolute;
+    width: 301px;
+    right: -94px;
+    top: 41%;
+    transform: translateY(-50%);
+}
+
+
+/* ===================================================
+   RESPONSIVE BREAKPOINTS
+   =================================================== */
+
+/* ===== LARGE DESKTOPS (1440px+) ===== */
+@media (min-width: 1440px) {
+    .hero_text h1 {
+        font-size: 4.5svw;
+    }
+
+    .hero_text h2 {
+        font-size: 2.7svw;
+        margin-top: -28px;
+    }
+
+    .hero_text h3 {
+        font-size: 3.7svw;
+        margin-top: -36px;
+    }
+
+    .hero_text h4 {
+        font-size: 3.4svw;
+        margin-bottom: -28px;
+    }
+}
+
+/* ===== STANDARD LAPTOPS / DESKTOPS (1024px – 1280px) ===== */
+@media (max-width: 1280px) {
+    .hero_text h1 {
+        font-size: 5.5svw;
+    }
+
+    .hero_text h2 {
+        font-size: 3.3svw;
+        margin-top: -24px;
+    }
+
+    .hero_text h3 {
+        font-size: 4.5svw;
+        margin-top: -32px;
+    }
+
+    .hero_text h4 {
+        font-size: 4.2svw;
+        margin-bottom: -24px;
+    }
+
+    .LOnion {
+        width: 340px;
+        left: -50px;
+    }
+
+    .ROnion {
+        width: 260px;
+        right: -70px;
+    }
+
+    .LeftCloud {
+        left: -960px;
+    }
+
+    .RightCloud {
+        right: -1370px;
+    }
+}
+
+/* ===== SMALL LAPTOPS / LARGE TABLETS LANDSCAPE (900px – 1024px) ===== */
+/* @media (max-width: 1024px) {
+    .hero_text h1 {
+        font-size: 6svw;
+    }
+
+    .hero_text h2 {
+        font-size: 3.6svw;
+        margin-top: -20px;
+    }
+
+    .hero_text h3 {
+        font-size: 5svw;
+        margin-top: -28px;
+    }
+
+    .hero_text h4 {
+        font-size: 4.6svw;
+        margin-bottom: -20px;
+    }
+
+    .hero_img .biriyani {
+        max-width: 600px;
+    }
+
+    .LOnion {
+        width: 280px;
+        left: -40px;
+    }
+
+    .ROnion {
+        width: 220px;
+        right: -55px;
+    }
+
+    .LTOnion {
+        width: 80px;
+    }
+
+    .LeftCloud {
+        left: -1050px;
+    }
+
+    .RightCloud {
+        right: -1450px;
+    }
+} */
+
+/* ===== TABLETS PORTRAIT / LARGE PHONES LANDSCAPE (600px – 900px) ===== */
+@media (max-width: 1199px) {
+    .HeroMain {
+        height: auto;
+        min-height: 100svh;
+        padding: 80px 0 40px;
+        background-position: center center;
+    }
+
+    .HeroSub {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Text takes full width and centres */
+    .hero_text {
+        width: 100%;
+        text-align: center;
+        order: 1;
+    }
+
+    .hero_text h1 {
+        font-size: 9vw;
+    }
+
+    .hero_text h2 {
+        font-size: 5.5vw;
+        margin-top: -18px;
+    }
+
+    .hero_text h3 {
+        font-size: 7.5vw;
+        margin-top: -22px;
+    }
+
+    .hero_text h4 {
+        font-size: 7vw;
+        margin-bottom: -18px;
+    }
+
+    /* Image section becomes a centred block with fixed height */
+    .hero_img {
+        width: 100%;
+        order: 2;
+        height: 300px;
+    }
+
+    .hero_img .biriyani {
+        max-width: 460px;
+    }
+
+    /* Mint leaves — scale down */
+    .hero_img img:nth-child(2) {
+        width: 60px;
+        left: 72%;
+    }
+
+    .hero_img img:nth-child(3) {
+        width: 55px;
+        left: 8%;
+    }
+
+    .hero_img img:nth-child(4) {
+        width: 50px;
+        left: 90%;
+    }
+
+    /* Decorative onions — shrink & reposition */
+    .LOnion {
+        width: 200px;
+        left: -55px;
+        top: auto;
+        bottom: -54px;
+        transform: none;
+    }
+
+    .ROnion {
+        width: 160px;
+        right: -51px;
+        top: 50%;
+    }
+
+    .LTOnion {
+        width: 115px;
+        left: -15px;
+        top: 20%;
+    }
+
+    /* Clouds — push further off-screen so they barely peek */
+    .LeftCloud {
+        left: -760px;
+    }
+
+    .RightCloud {
+        right: -728px;
+    }
+}
+
+/* ===== MOBILE LANDSCAPE (max-height: 500px & wide) ===== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .HeroMain {
+        height: auto;
+        min-height: 100svh;
+        padding: 60px 0 20px;
+    }
+
+    .HeroSub {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero_text {
+        width: 50%;
+        text-align: left;
+    }
+
+    .hero_text h1 {
+        font-size: 5.5vw;
+    }
+
+    .hero_text h2 {
+        font-size: 3.3vw;
+        margin-top: -14px;
+    }
+
+    .hero_text h3 {
+        font-size: 4.6vw;
+        margin-top: -18px;
+    }
+
+    .hero_text h4 {
+        font-size: 4.2vw;
+        margin-bottom: -14px;
+    }
+
+    .hero_img {
+        width: 50%;
+        height: 240px;
+    }
+
+    .hero_img .biriyani {
+        max-width: 280px;
+    }
+
+    .LOnion {
+        width: 150px;
+    }
+
+    .ROnion {
+        width: 130px;
+    }
+
+    .LTOnion {
+        width: 55px;
+    }
+}
+
+/* ===== SMALL MOBILE (max-width: 480px) ===== */
+@media (max-width: 480px) {
+    .HeroMain {
+        padding: 70px 0 30px;
+        background-position: 60% center;
+    }
+
+    .hero_text h1 {
+        font-size: 10.5vw;
+    }
+
+    .hero_text h2 {
+        font-size: 6.5vw;
+        margin-top: -14px;
+    }
+
+    .hero_text h3 {
+        font-size: 9vw;
+        margin-top: -18px;
+    }
+
+    .hero_text h4 {
+        font-size: 8.5vw;
+        margin-bottom: -14px;
+    }
+
+    .hero_img {
+        height: 250px;
+    }
+
+    .hero_img .biriyani {
+        max-width: 300px;
+    }
+
+    .hero_img img:nth-child(2) {
+        width: 48px;
+        left: 70%;
+    }
+
+    .hero_img img:nth-child(3) {
+        width: 44px;
+        left: 6%;
+    }
+
+    .hero_img img:nth-child(4) {
+        width: 40px;
+        left: 92%;
+    }
+
+    .LOnion {
+        width: 160px;
+        left: -34px;
+    }
+
+    .ROnion {
+        width: 130px;
+        right: -50px;
+    }
+
+    .LTOnion {
+        width: 55px;
+        top: 18%;
+    }
+
+    .LeftCloud {
+        left: -1150px;
+    }
+
+    .RightCloud {
+        right: -1600px;
+    }
+}
+
+/* ===== VERY SMALL MOBILE (max-width: 360px) ===== */
+@media (max-width: 360px) {
+    .hero_text h1 {
+        font-size: 12vw;
+    }
+
+    .hero_text h2 {
+        font-size: 7.5vw;
+        margin-top: -12px;
+    }
+
+    .hero_text h3 {
+        font-size: 10vw;
+        margin-top: -14px;
+    }
+
+    .hero_text h4 {
+        font-size: 9.5vw;
+        margin-bottom: -12px;
+    }
+
+    .hero_img {
+        height: 210px;
+    }
+
+    .hero_img .biriyani {
+        max-width: 260px;
+    }
+
+    .LOnion {
+        width: 130px;
+    }
+
+    .ROnion {
+        width: 110px;
+    }
+
+    .LTOnion {
+        width: 45px;
+    }
+}
