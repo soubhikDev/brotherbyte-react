@@ -74,3 +74,100 @@
     border-radius: 30px !important;
 
 }
+@media screen and (max-width: 1499px) {
+    .imageDiscountSection img{
+        width: 440px;
+    }
+    .textDiscountSection h1{
+        font-size: 4.5svw;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 1299px) {
+    .imageDiscountSection img{
+        width: 400px;
+    }
+    .textDiscountSection h1{
+        font-size: 4svw;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 1199px){
+    .imageDiscountSection {
+    width: 100%;
+    margin-right: auto;
+    }
+    .DiscountMain{
+        flex-direction: column;
+        margin-top: 150px;
+        aspect-ratio: unset;
+    }
+    .textDiscountSection {
+        width: 100%;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+    }
+    .imageDiscountSection img{
+        top: -150px;
+        width: 300px;
+        left: unset;
+        right: 0;
+        transform: unset;
+        z-index: 0;   
+    }
+    .textDiscountSection h1 {
+        font-size: 60px;
+        margin-bottom: unset;
+        line-height: 60px;
+    }
+    .textDiscountSection h2 {
+    font-size: 30px;
+    margin-top: unset;
+    line-height: 30px;
+    margin-bottom: 15px;
+    }
+    .inputSection button{
+        height: 56px;
+    }
+}
+@media screen and (max-width: 699px){
+    .textDiscountSection h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .textDiscountSection h2 {
+    font-size: 22px;
+    line-height: 25px;
+    }
+    .inputSection{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .inputSection .MuiTextField-root{
+        width: 100%;
+    }
+    .inputSection button{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 499px){
+    .textDiscountSection h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .textDiscountSection h2 {
+    font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
