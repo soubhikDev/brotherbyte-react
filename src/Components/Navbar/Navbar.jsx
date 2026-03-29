@@ -1,20 +1,19 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import Logo from '../../assets/BrotherByteLOGO.png'
+import { NavLink } from "react-router-dom";
 
 const NAV_LINKS = [
-    { label: "Home", href: "#" },
-    { label: "Work", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Home", href: "/" },
+    { label: "Menu", href: "/menu" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [progress, setProgress] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
-    const [activeLink, setActiveLink] = useState("Home");
 
     useEffect(() => {
         const handleScroll = () => {
@@ -56,23 +55,14 @@ export default function Navbar() {
                     </a>
 
                     {/* Desktop Nav Links */}
-                    <ul className="nav-links">
+                    <div className="nav-links">
                         {NAV_LINKS.map(({ label, href }) => (
-                            <li key={label}>
-                                <a
-                                    href={href}
-                                    className={activeLink === label ? "active" : ""}
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        setActiveLink(label);
-                                    }}
-                                >
-                                    <span className="link-dot" />
+                            <NavLink key={label} to={href}>
+                                <span className="link-dot" />
                                     {label}
-                                </a>
-                            </li>
+                            </NavLink>
                         ))}
-                    </ul>
+                    </div>
 
                     {/* Right Side */}
                     <div className="nav-right">
@@ -110,16 +100,12 @@ export default function Navbar() {
             {/* ===== MOBILE MENU ===== */}
             <div className={`nav-mobile-menu ${menuOpen ? "open" : ""}`} role="dialog" aria-modal="true">
                 {NAV_LINKS.map(({ label, href }) => (
-                    <a
+                    <NavLink
                         key={label}
-                        href={href}
-                        onClick={() => {
-                            setActiveLink(label);
-                            setMenuOpen(false);
-                        }}
-                    >
+                        to={href}
+                        onClick={() => {setMenuOpen(false);}}>
                         {label}
-                    </a>
+                    </NavLink>
                 ))}
                 <a href="#" className="mobile-cta" onClick={() => setMenuOpen(false)}>
                     Get Started ↗

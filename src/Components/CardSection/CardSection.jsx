@@ -1,69 +1,10 @@
 import { useEffect, useRef } from "react";
 import "./CardSection.css";
-
+import { FoodData } from "../../../FoodData";
+import { NavLink } from "react-router-dom";
 
 // ─── Data ───────────────────────────────────────────────────────────────────
-const FOODS = [
-  {
-    id: 1,
-    name: "Truffle Risotto",
-    tag: "Italian",
-    time: "35 min",
-    desc: "Creamy arborio rice with black truffle shavings, aged parmesan, and a drizzle of truffle oil.",
-    price: "28",
-    rating: "4.9",
-    reviews: "214",
-    badge: "Chef's Pick",
-    img: "https://images.unsplash.com/photo-1673430847705-0d42aef1c7f7?w=800&q=80",
-    featured: true,
-  },
-  {
-    id: 2,
-    name: "Wagyu Burger",
-    tag: "American",
-    time: "20 min",
-    desc: "A5 wagyu patty, aged cheddar, caramelized onions, truffle aioli on a brioche bun.",
-    price: "34",
-    rating: "4.8",
-    reviews: "189",
-    badge: "Bestseller",
-    img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=800&q=80",
-  },
-  {
-    id: 3,
-    name: "Salmon Tartare",
-    tag: "Seafood",
-    time: "15 min",
-    desc: "Fresh Atlantic salmon, citrus ponzu, avocado cream, crispy capers and sesame.",
-    price: "22",
-    rating: "4.7",
-    reviews: "97",
-    img: "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800&q=80",
-  },
-  {
-    id: 4,
-    name: "Duck Confit",
-    tag: "French",
-    time: "45 min",
-    desc: "Slow-cooked duck leg, lentil cassoulet, cherry gastrique and microgreens.",
-    price: "31",
-    rating: "4.9",
-    reviews: "143",
-    badge: "New",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&q=80",
-  },
-  {
-    id: 5,
-    name: "Matcha Lava Cake",
-    tag: "Dessert",
-    time: "12 min",
-    desc: "Warm matcha sponge with a molten white chocolate center, yuzu cream and gold dust.",
-    price: "14",
-    rating: "4.8",
-    reviews: "231",
-    img: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&q=80",
-  },
-];
+
 
 const FILTERS = ["All", "Italian", "American", "Seafood", "French", "Dessert"];
 
@@ -78,20 +19,6 @@ export default function CardSection() {
   const cardRefs = useRef([]);
   const favStates = useRef({});
 
-//   // Inject CSS
-//   useEffect(() => {
-//     const id = "food-card-css";
-//     if (!document.getElementById(id)) {
-//       const style = document.createElement("style");
-//       style.id = id;
-//       style.textContent = CSS;
-//       document.head.appendChild(style);
-//     }
-//     return () => {
-//       const el = document.getElementById(id);
-//       if (el) el.remove();
-//     };
-//   }, []);
 
   // GSAP animations
   useEffect(() => {
@@ -248,8 +175,9 @@ export default function CardSection() {
 
       {/* ── Grid ── */}
       <div className="fs-grid">
-        {FOODS.map((food, idx) => (
-          <article
+        {FoodData.map((food, idx) => (
+          <NavLink
+            to={`/menu/menu-lists/${food.id}`}
             key={food.id}
             className={`fs-card${food.featured ? " featured" : ""}`}
             ref={(el) => (cardRefs.current[idx] = el)}
@@ -292,7 +220,7 @@ export default function CardSection() {
                 </button>
               </div>
             </div>
-          </article>
+          </NavLink>
         ))}
       </div>
 
