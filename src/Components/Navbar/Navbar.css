@@ -62,7 +62,7 @@
     font-family: var(--font-body);
     font-size: 14px;
     font-weight: 500;
-    color: var(--text-muted);
+    color: #fff;
     padding: 8px 14px;
     border-radius: 8px;
     position: relative;
@@ -72,7 +72,7 @@
 
 .nav-links a:hover {
     color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 0, 0, 0.165);
 }
 
 .nav-links .active {

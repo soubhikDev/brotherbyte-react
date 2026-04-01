@@ -9,9 +9,14 @@ import LTOnion from '../../assets/LTOnion.png'
 import LOnion from '../../assets/LOnion.png'
 import RightCloud from '../../assets/RightCloud.png'
 import LeftCloud from '../../assets/LeftCloud.png'
+import BrotherByteLOGO from '../../assets/BrotherByteLOGO.png'
+import BannerHero from '../../assets/BannerHero.png'
+import { useNavigate } from "react-router-dom";
 
 
 export default function Hero() {
+    const navigate = useNavigate();
+    
   return (
     <>
         <div className="HeroMain">
@@ -19,21 +24,15 @@ export default function Hero() {
                 <div className="hero_text">
                     <h4>Delicious</h4>
                     <h1>Food Delivery</h1>
-                    <h2>during your Trip</h2>
-                    <h3>Call & Book</h3>
+                    <h2>To your seat at the</h2>
+                    <h2>next bus stop</h2>
+                    <div className="HomeBannerBTN">
+                        <button className="HomeBannerBTN1" onClick={() => navigate("/menu")}>Order Now</button>
+                        <button className="HomeBannerBTN2" onClick={() => navigate("/contact")}>Call Now</button>
+                    </div>
                 </div>
-                <div className="hero_img">
-                    <img className='biriyani' src={Biriyani} alt="" />
-                    <img src={Mint1} alt="" />
-                    <img src={Mint2} alt="" />
-                    <img src={Mint3} alt="" />
-                </div>
+                <img src={BannerHero} alt="Banner" />
             </div>
-            <img className='LeftCloud' src={LeftCloud} alt="" />
-            <img className='RightCloud' src={RightCloud} alt="" />
-            <img className='ROnion' src={ROnion} alt="" />
-            <img className='LTOnion' src={LTOnion} alt="" />
-            <img className='LOnion' src={LOnion} alt="" />
         </div>
     </>
   )

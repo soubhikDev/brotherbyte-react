@@ -1,13 +1,12 @@
-import React, { useEffect, useRef } from 'react'
-import "../../Components/CardSection/CardSection.css";
-import { FoodData } from '../../../FoodData'
-import { NavLink, useParams } from 'react-router-dom';
-
-export default function MenuList() {
-  console.log(FoodData);
+import React from 'react'
+import { FoodData } from "../../../FoodData";
+import { NavLink, useLocation, useNavigate, useNavigation } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 
-   const sectionRef = useRef(null);
+export default function MenuHome() {
+
+    const sectionRef = useRef(null);
     const eyebrowRef = useRef(null);
     const titleRef = useRef(null);
     const subtitleRef = useRef(null);
@@ -19,7 +18,6 @@ export default function MenuList() {
   
     // GSAP animations
     useEffect(() => {
-      window.scrollTo(0, 0); // Scroll to top on component mount
       let gsap, ScrollTrigger;
   
       const loadGSAP = async () => {
@@ -128,40 +126,29 @@ export default function MenuList() {
       if (window.gsap) {
         window.gsap.fromTo(btn, { scale: 1 }, { scale: 1.3, yoyo: true, repeat: 1, duration: 0.15 });
       }
-    };
-  
-    const handleAdd = (e) => {
-      e.stopPropagation();
-      const btn = e.currentTarget;
-      if (window.gsap) {
-        window.gsap.fromTo(
-          btn,
-          { scale: 1 },
-          { scale: 1.35, yoyo: true, repeat: 1, duration: 0.18, ease: "power2.out" }
-        );
-      }
-    };
-  
-
-
-    const { id } = useParams();
-
-    const Food = FoodData.find(item => item.id === Number(id));
-
-    if (!Food) {
-        return  <>
-                    <h1>Food not found</h1>
-                </>
-    }
-  
+    };  
+    const location = useNavigate()
   return (
     <>
-    <section className="fs-section" ref={sectionRef}>
-        <div className="fs-grid">
-        {FoodData.map((menu) =>
-        menu.FoodList.map((food, idx) => (
+            <section className="fs-section" ref={sectionRef}>
+      {/* ── Header ── */}
+      <header className="fs-header">
+        <p className="fs-eyebrow" ref={eyebrowRef}>Curated for you</p>
+        <h1 className="fs-title" ref={titleRef}>
+          Taste the <span>Extraordinary</span>
+        </h1>
+        <p className="fs-subtitle" ref={subtitleRef}>
+          Each dish is crafted with obsession. Seasonal ingredients, bold ideas, unforgettable memory.
+        </p>
+      </header>
+
+
+      {/* ── Grid ── */}
+      <div className="fs-grid">
+        {FoodData.map((food, idx) => (
           <NavLink
-            key={food.food_id}
+            to={'/menu'}
+            key={food.id}
             className={`fs-card${food.featured ? " featured" : ""}`}
             ref={(el) => (cardRefs.current[idx] = el)}
           >
@@ -170,12 +157,12 @@ export default function MenuList() {
               <img
                 className="fs-card-img"
                 src={food.img}
-                alt={food.food_name}
+                alt={food.name}
                 loading="lazy"
               />
               <div className="fs-card-overlay" />
               {food.badge && <span className="fs-card-badge">{food.badge}</span>}
-              <button className="fs-card-fav" onClick={(e) => handleFav(e, food.food_id)}>
+              <button className="fs-card-fav" onClick={(e) => handleFav(e, food.id)}>
                 <span>♡</span>
               </button>
             </div>
@@ -187,7 +174,7 @@ export default function MenuList() {
                 <span className="fs-card-dot" />
                 <span className="fs-card-time">⏱ {food.time}</span>
               </div>
-              <h2 className="fs-card-name">{food.food_name}</h2>
+              <h2 className="fs-card-name">{food.MenuName}</h2>
               <p className="fs-card-desc">{food.desc}</p>
               <div className="fs-card-footer">
                 <div>
@@ -198,15 +185,25 @@ export default function MenuList() {
                     ★★★★★ <span>({food.reviews})</span>
                   </div>
                 </div>
-                <button className="fs-add-btn" onClick={handleAdd} aria-label="Add to cart">
-                  +
-                </button>
+                
               </div>
             </div>
           </NavLink>
-        )))}
+        ))}
       </div>
-      </section>
+
+
+      {/* ── CTA ── */}
+      <div className="fs-cta" ref={ctaRef}>
+        <button className="fs-cta-btn" onClick={() => location("/menu")}>
+          View Full Menu
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+
+    </section>
     </>
   )
 }

@@ -58,7 +58,7 @@ export default function Navbar() {
                     <div className="nav-links">
                         {NAV_LINKS.map(({ label, href }) => (
                             <NavLink key={label} to={href}>
-                                <span className="link-dot" />
+                                {/* <span className="link-dot" /> */}
                                     {label}
                             </NavLink>
                         ))}

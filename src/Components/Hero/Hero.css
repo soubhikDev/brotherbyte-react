@@ -1,6 +1,6 @@
 /* ===== BASE STYLES ===== */
 .HeroMain {
-    height: 100svh;
+    height: 70svh;
     overflow: hidden;
     background: url(../../assets/HeroBackground.jpg);
     background-repeat: no-repeat;
@@ -9,26 +9,33 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    position: relative;
 }
 
 .HeroSub {
     display: flex;
     justify-content: space-between;
+    position: relative;
     align-items: center;
 }
 
 /* ===== HERO TEXT ===== */
 .hero_text {
-    width: 50%;
+    width:100%;
     position: relative;
     z-index: 2;
+}
+.hero_text img {
+    width: 120px;
+    margin-bottom: 20px;
 }
 
 .hero_text h1 {
     font-size: 5svw;
     font-weight: 900;
     color: #fff;
+    line-height: 70px;
+    text-transform: uppercase;
+    margin-top: 20px;
 }
 
 .hero_text h2 {
@@ -36,7 +43,7 @@
     font-weight: 600;
     color: #ffbd2f;
     text-transform: uppercase;
-    margin-top: -30px;
+    line-height: 50px;
 }
 
 .hero_text h3 {
@@ -44,7 +51,8 @@
     font-weight: 800;
     color: #ff8d2f;
     text-transform: uppercase;
-    margin-top: -40px;
+    line-height: 50px;
+    margin-top: 10px;
 }
 
 .hero_text h4 {
@@ -89,7 +97,7 @@
 
 .hero_img .biriyani {
     width: 100%;
-    max-width: 800px;
+    max-width: 300px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -115,415 +123,130 @@
     z-index: 0;
     opacity: 0.7;
 }
+.HomeBannerBTN{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.HomeBannerBTN1 {
+  position: relative;
+  padding: 14px 34px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--amber-light) 0%, var(--amber));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(232, 121, 109, 0.25);
+}
 
-.LOnion {
+/* Hover effect */
+.HomeBannerBTN1:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 16px 40px rgba(232, 111, 109, 0.4);
+}
+
+/* Click (press) effect */
+.HomeBannerBTN1:active {
+  transform: scale(0.95);
+  box-shadow: 0 6px 15px rgba(232, 109, 109, 0.2);
+}
+
+/* Shine effect */
+.HomeBannerBTN1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: all 0.6s ease;
+}
+
+.HomeBannerBTN1:hover::before {
+  left: 100%;
+}
+.HomeBannerBTN2 {
+  position: relative;
+  padding: 14px 34px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--amber-light);
+  background: transparent;
+  border: 2px solid var(--amber);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  overflow: hidden;
+}
+
+/* Hover fill animation */
+.HomeBannerBTN2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--amber-light);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+.HomeBannerBTN2:hover::before {
+  transform: scaleX(1);
+}
+
+/* Text color change */
+.HomeBannerBTN2:hover {
+  color: var(--text-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(232, 184, 109, 0.25);
+}
+
+/* Click effect */
+.HomeBannerBTN2:active {
+  transform: scale(0.95);
+}
+
+/* Pulse ring effect */
+.HomeBannerBTN2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  border: 2px solid #e8b86d;
+  opacity: 0;
+}
+
+.HomeBannerBTN2:hover::after {
+  animation: pulseRing 0.6s ease-out;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+.HeroSub img{
+    width: 100%;
+    max-width: 350px;
     position: absolute;
-    left: -60px;
-    top: 100%;
+    right: 0;
+    top: 50%;
     transform: translateY(-50%);
-    width: 410px;
-}
-
-.LTOnion {
-    position: absolute;
-    width: fit-content;
-    left: -9px;
-    top: 30%;
-    transform: translateY(-50%);
-}
-
-.ROnion {
-    position: absolute;
-    width: 301px;
-    right: -94px;
-    top: 41%;
-    transform: translateY(-50%);
-}
-
-
-/* ===================================================
-   RESPONSIVE BREAKPOINTS
-   =================================================== */
-
-/* ===== LARGE DESKTOPS (1440px+) ===== */
-@media (min-width: 1440px) {
-    .hero_text h1 {
-        font-size: 4.5svw;
-    }
-
-    .hero_text h2 {
-        font-size: 2.7svw;
-        margin-top: -28px;
-    }
-
-    .hero_text h3 {
-        font-size: 3.7svw;
-        margin-top: -36px;
-    }
-
-    .hero_text h4 {
-        font-size: 3.4svw;
-        margin-bottom: -28px;
-    }
-}
-
-/* ===== STANDARD LAPTOPS / DESKTOPS (1024px – 1280px) ===== */
-@media (max-width: 1280px) {
-    .hero_text h1 {
-        font-size: 5.5svw;
-    }
-
-    .hero_text h2 {
-        font-size: 3.3svw;
-        margin-top: -24px;
-    }
-
-    .hero_text h3 {
-        font-size: 4.5svw;
-        margin-top: -32px;
-    }
-
-    .hero_text h4 {
-        font-size: 4.2svw;
-        margin-bottom: -24px;
-    }
-
-    .LOnion {
-        width: 340px;
-        left: -50px;
-    }
-
-    .ROnion {
-        width: 260px;
-        right: -70px;
-    }
-
-    .LeftCloud {
-        left: -960px;
-    }
-
-    .RightCloud {
-        right: -1370px;
-    }
-}
-
-/* ===== SMALL LAPTOPS / LARGE TABLETS LANDSCAPE (900px – 1024px) ===== */
-/* @media (max-width: 1024px) {
-    .hero_text h1 {
-        font-size: 6svw;
-    }
-
-    .hero_text h2 {
-        font-size: 3.6svw;
-        margin-top: -20px;
-    }
-
-    .hero_text h3 {
-        font-size: 5svw;
-        margin-top: -28px;
-    }
-
-    .hero_text h4 {
-        font-size: 4.6svw;
-        margin-bottom: -20px;
-    }
-
-    .hero_img .biriyani {
-        max-width: 600px;
-    }
-
-    .LOnion {
-        width: 280px;
-        left: -40px;
-    }
-
-    .ROnion {
-        width: 220px;
-        right: -55px;
-    }
-
-    .LTOnion {
-        width: 80px;
-    }
-
-    .LeftCloud {
-        left: -1050px;
-    }
-
-    .RightCloud {
-        right: -1450px;
-    }
-} */
-
-/* ===== TABLETS PORTRAIT / LARGE PHONES LANDSCAPE (600px – 900px) ===== */
-@media (max-width: 1199px) {
-    .HeroMain {
-        height: auto;
-        min-height: 100svh;
-        padding: 80px 0 40px;
-        background-position: center center;
-    }
-
-    .HeroSub {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    /* Text takes full width and centres */
-    .hero_text {
-        width: 100%;
-        text-align: center;
-        order: 1;
-    }
-
-    .hero_text h1 {
-        font-size: 9vw;
-    }
-
-    .hero_text h2 {
-        font-size: 5.5vw;
-        margin-top: -18px;
-    }
-
-    .hero_text h3 {
-        font-size: 7.5vw;
-        margin-top: -22px;
-    }
-
-    .hero_text h4 {
-        font-size: 7vw;
-        margin-bottom: -18px;
-    }
-
-    /* Image section becomes a centred block with fixed height */
-    .hero_img {
-        width: 100%;
-        order: 2;
-        height: 300px;
-    }
-
-    .hero_img .biriyani {
-        max-width: 460px;
-    }
-
-    /* Mint leaves — scale down */
-    .hero_img img:nth-child(2) {
-        width: 60px;
-        left: 72%;
-    }
-
-    .hero_img img:nth-child(3) {
-        width: 55px;
-        left: 8%;
-    }
-
-    .hero_img img:nth-child(4) {
-        width: 50px;
-        left: 90%;
-    }
-
-    /* Decorative onions — shrink & reposition */
-    .LOnion {
-        width: 200px;
-        left: -55px;
-        top: auto;
-        bottom: -54px;
-        transform: none;
-    }
-
-    .ROnion {
-        width: 160px;
-        right: -51px;
-        top: 50%;
-    }
-
-    .LTOnion {
-        width: 115px;
-        left: -15px;
-        top: 20%;
-    }
-
-    /* Clouds — push further off-screen so they barely peek */
-    .LeftCloud {
-        left: -760px;
-    }
-
-    .RightCloud {
-        right: -728px;
-    }
-}
-
-/* ===== MOBILE LANDSCAPE (max-height: 500px & wide) ===== */
-@media (max-height: 500px) and (orientation: landscape) {
-    .HeroMain {
-        height: auto;
-        min-height: 100svh;
-        padding: 60px 0 20px;
-    }
-
-    .HeroSub {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .hero_text {
-        width: 50%;
-        text-align: left;
-    }
-
-    .hero_text h1 {
-        font-size: 5.5vw;
-    }
-
-    .hero_text h2 {
-        font-size: 3.3vw;
-        margin-top: -14px;
-    }
-
-    .hero_text h3 {
-        font-size: 4.6vw;
-        margin-top: -18px;
-    }
-
-    .hero_text h4 {
-        font-size: 4.2vw;
-        margin-bottom: -14px;
-    }
-
-    .hero_img {
-        width: 50%;
-        height: 240px;
-    }
-
-    .hero_img .biriyani {
-        max-width: 280px;
-    }
-
-    .LOnion {
-        width: 150px;
-    }
-
-    .ROnion {
-        width: 130px;
-    }
-
-    .LTOnion {
-        width: 55px;
-    }
-}
-
-/* ===== SMALL MOBILE (max-width: 480px) ===== */
-@media (max-width: 480px) {
-    .HeroMain {
-        padding: 70px 0 30px;
-        background-position: 60% center;
-    }
-
-    .hero_text h1 {
-        font-size: 10.5vw;
-    }
-
-    .hero_text h2 {
-        font-size: 6.5vw;
-        margin-top: -14px;
-    }
-
-    .hero_text h3 {
-        font-size: 9vw;
-        margin-top: -18px;
-    }
-
-    .hero_text h4 {
-        font-size: 8.5vw;
-        margin-bottom: -14px;
-    }
-
-    .hero_img {
-        height: 250px;
-    }
-
-    .hero_img .biriyani {
-        max-width: 300px;
-    }
-
-    .hero_img img:nth-child(2) {
-        width: 48px;
-        left: 70%;
-    }
-
-    .hero_img img:nth-child(3) {
-        width: 44px;
-        left: 6%;
-    }
-
-    .hero_img img:nth-child(4) {
-        width: 40px;
-        left: 92%;
-    }
-
-    .LOnion {
-        width: 160px;
-        left: -34px;
-    }
-
-    .ROnion {
-        width: 130px;
-        right: -50px;
-    }
-
-    .LTOnion {
-        width: 55px;
-        top: 18%;
-    }
-
-    .LeftCloud {
-        left: -1150px;
-    }
-
-    .RightCloud {
-        right: -1600px;
-    }
-}
-
-/* ===== VERY SMALL MOBILE (max-width: 360px) ===== */
-@media (max-width: 360px) {
-    .hero_text h1 {
-        font-size: 12vw;
-    }
-
-    .hero_text h2 {
-        font-size: 7.5vw;
-        margin-top: -12px;
-    }
-
-    .hero_text h3 {
-        font-size: 10vw;
-        margin-top: -14px;
-    }
-
-    .hero_text h4 {
-        font-size: 9.5vw;
-        margin-bottom: -12px;
-    }
-
-    .hero_img {
-        height: 210px;
-    }
-
-    .hero_img .biriyani {
-        max-width: 260px;
-    }
-
-    .LOnion {
-        width: 130px;
-    }
-
-    .ROnion {
-        width: 110px;
-    }
-
-    .LTOnion {
-        width: 45px;
-    }
+    z-index: 1;
 }

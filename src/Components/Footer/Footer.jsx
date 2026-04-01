@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import BrotherByteLOGO from '../../assets/BrotherByteLOGO.png';
 import './Footer.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -173,6 +174,7 @@ export default function Footer() {
         to: { y: 0 },
         duration: 0.7,
         ease: 'power2.out',
+        opacity: 1,
       });
 
     }, footerRef);
@@ -191,7 +193,9 @@ export default function Footer() {
         {/* Brand */}
         <div className="footer-brand" ref={brandRef}>
           <div>
-            <div className="brand-logo">Sav<span>ora</span></div>
+            <div className="brand-logo">
+              <img src={BrotherByteLOGO} />
+            </div>
             <p className="brand-tagline">
               Where every dish is a love letter to seasonal ingredients,
               ancient technique, and the joy of gathering around good food.
@@ -257,7 +261,7 @@ export default function Footer() {
       {/* ── BOTTOM BAR ── */}
       <div className="footer-bottom" ref={bottomRef}>
         <p className="footer-copy">
-          © 2026 <a href="#">Savora Restaurant</a>. All rights reserved.
+          © 2026 <a href="#">BrotherBytes</a>. All rights reserved.
         </p>
         <ul className="footer-legal">
           {['Privacy Policy', 'Cookie Policy', 'Accessibility', 'Terms'].map(l => (
