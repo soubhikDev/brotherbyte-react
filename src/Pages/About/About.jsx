@@ -66,20 +66,7 @@ export default function About() {
             travel experience.
           </p>
 
-          {/* ── Stats ── */}
-          <div className="about-stats">
-            {[
-              { number: '145+', label: 'Partner Restaurants' },
-              { number: 'FSSAI', label: 'Certified Kitchens' },
-              { number: '100%', label: 'Fresh Ingredients' },
-              { number: '24/7', label: 'Support Available' },
-            ].map((s) => (
-              <div className="stat-item" key={s.label}>
-                <div className="stat-number">{s.number}</div>
-                <div className="stat-label">{s.label}</div>
-              </div>
-            ))}
-          </div>
+        
 
           {/* ── Section Cards ── */}
           <div className="about-sections">

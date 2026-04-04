@@ -87,7 +87,6 @@
     border: #268a7b71 solid 1px;
     border-radius: 10px;
     position: relative;
-    min-height: 150px;
 }
 .couponsMapWrpr:nth-child(2){
     background: #be3f8736;
@@ -192,17 +191,71 @@
     }
     .textDiscountSection h1 {
         font-size: 60px;
-        margin-bottom: unset;
+        margin-bottom: 20px;
         line-height: 60px;
     }
-    .textDiscountSection h2 {
-    font-size: 30px;
+    .couponsMapWrpr h2 {
+    font-size: 4svh;
     margin-top: unset;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     }
     .inputSection button{
         height: 56px;
+    }
+    .couponsMapWrpr h1{
+        font-size: 5svw;
+    }
+    .couponsMapWrpr{
+        padding-left: 7.5svw;
+    }
+    .couponsMapWrpr h3 {
+    font-size: 2.3svw;
+    line-height: 2svw;
+    }
+    .couponsMapWrpr h4 {
+    font-size: 1.6svw;
+    line-height: 1.6svw;
+    margin-top: 1.6svh;
+    }
+}
+@media screen and (max-width: 999px){
+    .couponsMapWrpr h2 {
+        font-size: 3.2svh;
+    }
+        .couponsMapWrpr h3 {
+        font-size: 1.9svw;
+        line-height: 1.5svw;
+    }
+        .couponsMapWrpr h4 {
+        font-size: 1.4svw;
+        line-height: 1.3svw;
+        }
+        
+}
+@media screen and (max-width: 799px){
+        .coponesWrpr {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .couponsMapWrpr h1 {
+        font-size: 40px !important;
+    }
+    .couponsMapWrpr h2 {
+        font-size: 25px;
+    }
+    .couponsMapWrpr h3 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .couponsMapWrpr h4 {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .couponsMapWrpr {
+        padding-left: 65px;
+    }
+    .fs-section{
+        padding: 0;
     }
 }
 @media screen and (max-width: 699px){
@@ -213,10 +266,7 @@
         font-size: 40px;
         line-height: 50px;
     }
-    .textDiscountSection h2 {
-    font-size: 22px;
-    line-height: 25px;
-    }
+    
     .inputSection{
         flex-direction: column;
         gap: 15px;
@@ -233,11 +283,21 @@
         font-size: 30px;
         line-height: 30px;
     }
-    .textDiscountSection h2 {
-    font-size: 18px;
+    .textDiscountSection{
+        padding: 10px;
+    }
+    
+}
+@media screen and (max-width: 399px){
+    .couponsMapWrpr h4 {
+        font-size: 14px;
+    }
+    .couponsMapWrpr{
+        padding: 10px;
+        padding-left: 60px;
+        
     }
 }
-
 
 
 

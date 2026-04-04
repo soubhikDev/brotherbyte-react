@@ -3,8 +3,10 @@ import PageHero from '../../Components/PageHeros/PageHero'
 import './Menu.css'
 import ThaliMenuListHero from '../../assets/ThaliMenuListHero.png'
 import CardSection from '../../Components/CardSection/CardSection'
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import { Button, FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 import { LocationsData } from '../../../LocationsData'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Menu() {
@@ -29,7 +31,7 @@ export default function Menu() {
             setShowModal(false);
           }
         };
-
+        const navigate = useNavigate();
     
   return (
     <>
@@ -39,6 +41,9 @@ export default function Menu() {
               {showModal && (
                 <div className='modal'>
                   <div className='modalContent'>
+                    <Button variant="contained" size="small" className='CloseBtn' onClick={() => navigate('/')}>
+                      <KeyboardArrowLeftIcon />
+                    </Button>
                     <h3>Select City for <span>food Delivery</span></h3>
 
                     {/* <select

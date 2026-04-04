@@ -40,17 +40,9 @@
 }
 .ContactImG{
     width: 50%;
-    height: 287px;
-    overflow: hidden;
     border-radius: 16px;
 
 }
-.ContactImG img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .ContactItem {
   background:#fff0f0;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -85,7 +77,7 @@
 }
 
 .ContactItem h3 {
-  font-size: 15px;
+  font-size: 24px;
   font-weight: 600;
   color: #1a1a1a;
   margin: 0;
@@ -94,17 +86,21 @@
 
 /* ── Rows ── */
 .ContactItem-rows {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: calc(100% - 72px);
+    justify-content: space-evenly;
+
 }
 
 .ContactItem-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 14px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    align-items: center;
+    height: 100%;
 }
 
 .ContactItem-row:last-child {
@@ -113,15 +109,16 @@
 }
 
 .ContactItem-row-icon {
-  width: 32px;
-  height: 32px;
-  background: #f5f5f3;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: background 0.2s;
+    width: 62px;
+    height: 62px;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+
 }
 
 .ContactItem-row:hover .ContactItem-row-icon {
@@ -129,9 +126,9 @@
 }
 
 .ContactItem-row-icon svg {
-  width: 14px;
-  height: 14px;
-  stroke: #ff5722;
+    width: 24px;
+    height: 24px;
+    stroke: #d60000;
 }
 
 .ContactItem-row-content {
@@ -141,19 +138,19 @@
 }
 
 .ContactItem-row-label {
-  font-size: 10px;
-  font-weight: 500;
-  color: #999;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+font-size: 20px;
+    font-weight: 500;
+    color: #999;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 .ContactItem-row-value {
-  font-size: 13px;
-  font-weight: 400;
-  color: #1a1a1a;
-  line-height: 1.4;
-  margin: 0;
+    font-size: 22px;
+    font-weight: 400;
+    color: #1a1a1a;
+    line-height: 1.4;
+    margin: 0;
 }
 
 .ContactItem-row-value.is-link {
@@ -164,15 +161,48 @@
 .ContactItem-row-value.is-link:hover {
   text-decoration: underline;
 }
+.ContactMain .PageHeroSub .mainImgPH{
+transform: translateX(-50%) rotate(0deg) !important;
+}
 
 /* ── Responsive ── */
+@media screen and (max-width: 999px) {
+  .ContactWrpr{
+    flex-direction: column;
+  }
+  .ContactImG, .ContactItem{
+    width: 100%;
+  }
+}
+
 @media (max-width: 480px) {
   .ContactItem {
     padding: 18px 20px;
     max-width: 100%;
   }
-}
+  .ContactItem h3 {
+    font-size: 20px;
+  }
+  .ContactItem-row-icon {
+    width: 52px;
+    height: 52px;
+  }
+  .ContactItem-row-label {
+    font-size: 16px;
+  }
+  .ContactItem-row-value {
+    font-size: 18px;
+  }
 
+}
+@media (max-width: 399px){
+.ContactItem-row-label {
+        font-size: 14px;
+    }
+    .ContactItem-row-value {
+        font-size: 14px;
+    }
+}
 
 
 

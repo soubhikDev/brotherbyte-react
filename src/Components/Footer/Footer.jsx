@@ -275,18 +275,21 @@ export default function Footer() {
 
         {/* Newsletter */}
         <div className="footer-col footer-newsletter-inline" ref={el => colRefs.current[2] = el}>
-          <h3 className="col-title">Stay in Touch</h3>
+          <h3 className="col-title">Complaint Box</h3>
           <div className="newsletter-form">
             <input
               type="email"
               className="newsletter-input"
               placeholder="your@email.com"
             />
-            <button className="newsletter-submit">Subscribe</button>
+            <input
+              type="text"
+              className="newsletter-input"
+              placeholder="Write your complaint"
+            />
+            <button className="newsletter-submit">Submit Complaint</button>
           </div>
-          <p className="newsletter-note">
-            Monthly specials, seasonal menus &amp; table offers. No spam, ever.
-          </p>
+          
         </div>
 
       </div>

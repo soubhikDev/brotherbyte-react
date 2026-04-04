@@ -85,3 +85,29 @@
 .groupOrder .PageHeroMain{
         box-shadow: #000 0px 56px 380px 100px;
 }
+@media screen and (max-width: 1024px) {
+  .groupOrderSub{
+    min-height: 100svh;
+    height: unset;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+  }
+  .bulkFoodTEXT{
+    max-width: unset;
+    margin-left: unset;
+    width: 95%;
+    margin-bottom: 20px;
+  }
+  .bulk-container{
+    width: 95%;
+  }
+}
+
+
+
+
+
+
+
+
+

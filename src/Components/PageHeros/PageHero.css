@@ -115,7 +115,9 @@
 
 /* ── Mobile (≤ 480px) ───────────────────────────────────────── */
 @media (max-width: 480px) {
-
+        .PageHeroSub h1 {
+        font-size: 60px;
+    }
 
     .PageHeroMain > img:nth-child(4) {
         transform: translate(-180%, 30%) rotate(1deg);

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import PageHero from '../../Components/PageHeros/PageHero'
 import ContactHero from '../../assets/ContactHero.png'
 import LakhnoiBiriyani from '../../assets/LakhnoiBiriyani.jpg'
+import ContactBlock1 from '../../assets/ContactBlock1.png'
 import './Contact.css'
 
 
@@ -65,7 +66,7 @@ export default function Contact() {
               <p>We'd love to hear from you! Whether you have a question about our menu, want to provide feedback, or just want to say hello, feel free to reach out to us.</p>
               <div className="ContactWrpr">
                 <div className="ContactImG">
-                  <img src={LakhnoiBiriyani} alt="Contact Us" />
+                  <img src={ContactBlock1} alt="Contact Us" />
                 </div>
                 <div className="ContactItem">
       <div className="ContactItem-header">

@@ -1,8 +1,6 @@
 
 :root {
-  --fire: #ff5722;
-  --fire-light: #ff7849;
-  --fire-glow: rgba(255, 87, 34, 0.12);
+  --amber-glow: rgba(255, 87, 34, 0.12);
   --ink: #1a1a1a;
   --muted: #6b6b6b;
   --surface: #fafaf8;
@@ -38,7 +36,7 @@
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--fire);
+  color: var(--amber);
   margin-bottom: 16px;
 }
 
@@ -47,7 +45,7 @@
   display: block;
   width: 28px;
   height: 2px;
-  background: var(--fire);
+  background: var(--amber);
   border-radius: 2px;
 }
 
@@ -61,61 +59,17 @@
 }
 
 .about-title span {
-  color: var(--fire);
+  color: var(--amber);
 }
 
 .about-lead {
-  font-family: 'DM Sans', sans-serif;
   font-size: clamp(1rem, 2vw, 1.125rem);
   font-weight: 300;
   color: var(--muted);
   line-height: 1.8;
-  max-width: 640px;
   margin-bottom: 56px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid var(--border);
 }
 
-/* ── Stats Bar ── */
-.about-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-bottom: 64px;
-}
-
-.stat-item {
-  flex: 1 1 140px;
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 24px 20px;
-  text-align: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.stat-item:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-  border-color: var(--fire-light);
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 900;
-  color: var(--fire);
-  line-height: 1;
-  margin-bottom: 6px;
-}
-
-.stat-label {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
-  color: var(--muted);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
 
 /* ── Section Cards ── */
 .about-sections {
@@ -141,7 +95,7 @@
   left: 0;
   width: 3px;
   height: 100%;
-  background: linear-gradient(180deg, var(--fire), var(--fire-light));
+  background: linear-gradient(180deg, var(--amber), var(--amber-light));
   border-radius: 3px 0 0 3px;
   transform: scaleY(0);
   transform-origin: top;
@@ -161,7 +115,7 @@
 .card-icon {
   width: 44px;
   height: 44px;
-  background: var(--fire-glow);
+  background: var(--amber-glow);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -196,7 +150,7 @@
 }
 
 .why-item {
-  background: var(--fire-glow);
+  background: var(--amber-glow);
   border-radius: 14px;
   padding: 20px 18px;
   display: flex;
@@ -213,7 +167,7 @@
   width: 8px;
   height: 8px;
   min-width: 8px;
-  background: var(--fire);
+  background: var(--amber);
   border-radius: 50%;
   margin-top: 6px;
 }
@@ -228,7 +182,7 @@
 
 .why-item strong {
   font-weight: 500;
-  color: var(--fire);
+  color: var(--amber);
 }
 
 /* ── Closing Banner ── */

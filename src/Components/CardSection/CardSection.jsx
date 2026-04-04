@@ -4,6 +4,7 @@ import { FoodData } from "../../../FoodData";
 import { useLocation, useNavigate } from "react-router-dom";
 import Modal from "@mui/material/Modal";
 import { Avatar, AvatarGroup } from "@mui/material";
+import { toast } from "react-toastify";
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 
@@ -207,7 +208,34 @@ export default function CardSection() {
   const hideLayout = ["/menu"].includes(location.pathname);
 
   const isValid = totalAmount >= 3000;
+  let message = '';
+  const targetAmount = 3000;
 
+  if (totalAmount < targetAmount) {
+    let remaining = targetAmount - totalAmount;
+    message = `Add ₹${remaining} more to get ₹200 discount`;
+  } else if (totalAmount < 4000) {
+    let remaining = 4000 - totalAmount;
+    message = `Add ₹${remaining} more to get ₹400 discount`;
+  } else if (totalAmount < 5000) {
+    let remaining = 5000 - totalAmount;
+    message = `Add ₹${remaining} more to get ₹500 discount`;
+  } else {
+    message = ` 🎉 Congrats! You unlocked Maximum discount`
+  }
+
+
+
+  const ckeckOut = () => {
+    console.log("checkout clicked")
+    if (totalAmount < 3000){
+      toast.error(`Order Amount can not be less then Min Amount !!!`)
+    }else{
+      navigate('/payment', { state: { cartItems } })
+    }
+  }
+  console.log(message);
+  
   return (
     <section className="fs-section" ref={sectionRef}>
       {/* ── Header ── */}
@@ -361,7 +389,7 @@ export default function CardSection() {
         <div className="fs-cart-modal">
           {/* Modal Header */}
           <div className="fs-cart-modal-header">
-            <h2 id="cart-modal-title">🛒 Your Cart</h2>
+            <h2 id="cart-modal-title">🛒 Your Cart ({totalQty} items)</h2>
             <button
               className="fs-cart-close-btn"
               onClick={() => setCartOpen(false)}
@@ -412,10 +440,12 @@ export default function CardSection() {
           {/* Modal Footer */}
           <div className="fs-cart-modal-footer">
             <div className="fs-cart-total-row">
-              <span>Total ({totalQty} items)</span>
+              {/* <span>Total ({totalQty} items)</span> */}
+              <span>{message}</span>
+            
               <span className="fs-cart-grand-total">₹{totalAmount}</span>
             </div>
-            <button className={isValid ? 'checkoutEnabled' : 'fs-cart-checkout-btn'} disabled={totalAmount < 3000} onClick={() => navigate('/payment', { state: { cartItems } })}>
+            <button className={isValid ? 'checkoutEnabled' : 'fs-cart-checkout-btn'}  onClick={ckeckOut}>
               Proceed to Checkout →
             </button>
           </div>

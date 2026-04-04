@@ -161,10 +161,10 @@ export default function MenuHome() {
                 loading="lazy"
               />
               <div className="fs-card-overlay" />
-              {food.badge && <span className="fs-card-badge">{food.badge}</span>}
+              {/* {food.badge && <span className="fs-card-badge">{food.badge}</span>}
               <button className="fs-card-fav" onClick={(e) => handleFav(e, food.id)}>
                 <span>♡</span>
-              </button>
+              </button> */}
             </div>
 
             {/* Body */}

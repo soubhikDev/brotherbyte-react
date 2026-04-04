@@ -457,7 +457,7 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 96%;
   max-width: 560px;
   max-height: 80vh;
   background: #1a1a2e;
@@ -728,4 +728,31 @@
     transition: all 0.3s ease;
         width: 100%;
     padding: 15px;
+}
+@media screen and (max-width:699px){
+  .fs-cart-modal-header h2{
+    font-size: 0.95rem;
+  }
+  .fs-cart-items-list{
+    padding: 12px 7px;
+  }
+  .fs-cart-item{
+    border-radius: 10px;
+    padding: 9px;
+  }
+  .fs-cart-modal{
+        border-radius: 14px 14px 0 0;
+  }
+  .fs-cart-total-row span:nth-child(1){
+    font-size: 0.7rem;
+  
+  }
+  .fs-cart-modal-footer{
+    padding: 10px 10px 10px;
+  }
+}
+@media screen and (max-width:499px) {
+  .fs-title{
+  font-size: clamp(36px, 6vw, 80px);
+  }
 }

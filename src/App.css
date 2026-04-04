@@ -128,3 +128,18 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
     border-color: var(--amber) !important;
 }
+.Toastify__toast{
+    width: 400px !important;
+    font-size: 18px !important;
+    font-family: "Poppins", sans-serif !important;
+    color: var(--amber) !important;
+    padding: 20px !important;
+}
+@media screen and (max-width: 699px) {
+    .Toastify__toast{
+    width: 290px !important;
+    font-size: 14px !important;
+    font-family: "Poppins", sans-serif !important;
+    padding: 10px !important;
+}
+}

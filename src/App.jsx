@@ -10,6 +10,8 @@ import SignUp from "./Pages/SignUp/SignUp";
 import SignIn from "./Pages/SignIn/SignIn";
 import Payment from "./Pages/Payment/Payment";
 import GroupOrder from "./Pages/GroupOrder/GroupOrder";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
 
       </Routes>
       </BrowserRouter>
+      <ToastContainer position="top-center" autoClose={3000} />
     </>
   );
 }
