@@ -167,7 +167,7 @@
 /* ===== PROGRESS BAR ===== */
 .nav-progress {
     position: absolute;
-    bottom: -1px;
+    bottom: -3px;
     left: 0;
     height: 2px;
     background: linear-gradient(90deg, var(--accent), #aeff00);
