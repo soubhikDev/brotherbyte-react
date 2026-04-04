@@ -9,6 +9,7 @@ import WebsiteLayout from "./Layout/WebsiteLayout";
 import SignUp from "./Pages/SignUp/SignUp";
 import SignIn from "./Pages/SignIn/SignIn";
 import Payment from "./Pages/Payment/Payment";
+import GroupOrder from "./Pages/GroupOrder/GroupOrder";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/sign-in" element={<SignIn />}/>
           <Route path="/sign-up" element={<SignUp />}/>
           <Route path="/payment" element={<Payment />}/>
+          <Route path="/group-order" element={<GroupOrder />}/>
         </Route>
 
       </Routes>

@@ -1,0 +1,92 @@
+.SigninWrpr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100svh;
+    background: url(../../assets/SignINBG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.signInForm{
+    min-height: fit-content;
+    width: 400px;
+    background: #ffffff58;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px;
+    backdrop-filter: blur(15px);
+    border: var(--amber) solid 1px;
+    position: relative;
+}
+.signInForm h2{
+    text-align: center;
+    padding: 10px 0;
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text);
+}
+.SigninBackHomeBTN{
+    min-width: unset !important;
+    width: 35px !important;
+    height: 35px !important;
+    position: absolute !important;
+    left: 20px;
+    top: 20px;
+}
+.sign-up-link {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.sign-up-link span {
+    color: var(--amber);
+    font-weight: 600;
+}
+.signInForm .MuiFormControlLabel-root{
+    width: 100%;
+}
+.signInForm .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+    color: var(--amber) !important;
+}
+.signInForm .css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: var(--amber) !important;
+}
+.signInForm .css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+.signInForm .css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: var(--amber) !important;
+}
+.signInForm .MuiButtonBase-root{
+    background: var(--amber) !important;
+    color: #ffffff !important;
+    border-radius: 30px !important;
+
+}
+.signInForm .MuiCheckbox-root, .signInForm .MuiIconButton-root{
+    color: var(--amber) !important;
+    background: unset !important;
+}
+.signInForm img{
+    width: 75px;
+    position: absolute;
+    left: 50%;
+    top: -75px;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width: 499px) {
+    .signInForm {
+        width: 90%;
+    }
+}
+
+
+
+
+

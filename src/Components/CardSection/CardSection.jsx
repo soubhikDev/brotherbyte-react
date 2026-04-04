@@ -206,6 +206,8 @@ export default function CardSection() {
   const location = useLocation();
   const hideLayout = ["/menu"].includes(location.pathname);
 
+  const isValid = totalAmount >= 3000;
+
   return (
     <section className="fs-section" ref={sectionRef}>
       {/* ── Header ── */}
@@ -264,8 +266,8 @@ export default function CardSection() {
 
             <div className="fs-card-body">
               <div className="fs-card-meta">
-                <span className="fs-card-tag">{food.tag}</span>
-                <span className="fs-card-dot" />
+                {/* <span className="fs-card-tag">{food.tag}</span>
+                <span className="fs-card-dot" /> */}
                 <span className="fs-card-time">⏱ {food.time}</span>
               </div>
               <h2 className="fs-card-name">{food.MenuName}</h2>
@@ -379,7 +381,6 @@ export default function CardSection() {
                 />
                 <div className="fs-cart-item-info">
                   <h3 className="fs-cart-item-name">{item.MenuName}</h3>
-                  <span className="fs-cart-item-tag">{item.tag}</span>
                   <div className="fs-cart-item-price-row">
                     <span className="fs-cart-item-unit-price">
                       ₹{item.price} × {item.quantity}
@@ -414,7 +415,7 @@ export default function CardSection() {
               <span>Total ({totalQty} items)</span>
               <span className="fs-cart-grand-total">₹{totalAmount}</span>
             </div>
-            <button className="fs-cart-checkout-btn" onClick={() => navigate('/payment', { state: { cartItems } })}>
+            <button className={isValid ? 'checkoutEnabled' : 'fs-cart-checkout-btn'} disabled={totalAmount < 3000} onClick={() => navigate('/payment', { state: { cartItems } })}>
               Proceed to Checkout →
             </button>
           </div>

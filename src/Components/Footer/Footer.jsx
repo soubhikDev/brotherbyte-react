@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import BrotherByteLOGO from '../../assets/BrotherByteLOGO.png';
 import './Footer.css';
+import { NavLink } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -170,8 +171,8 @@ export default function Footer() {
 
       /* — bottom bar — */
       animIn(bottomRef.current, {
-        from: { y: 20 },
-        to: { y: 0 },
+        from: { y: 0 },
+        to: { y: 20 },
         duration: 0.7,
         ease: 'power2.out',
         opacity: 1,
@@ -185,6 +186,38 @@ export default function Footer() {
   /* Build doubled marquee items for seamless loop */
   const allItems = [...MARQUEE_ITEMS, ...MARQUEE_ITEMS];
 
+  // menu Arrays
+    const menuLists = [
+      {
+        menu: 'Home',
+        path: '/'
+      },
+      {
+        menu: 'Menu',
+        path: '/menu'
+      },
+      {
+        menu: 'About',
+        path: '/about'
+      },
+      {
+        menu: 'Contact',
+        path: '/contact'
+      },
+      {
+        menu: 'Group Order',
+        path: '/group-order'
+      }
+    ]
+
+    const visitLists = [
+      {
+        menu: 'Gift Vouchers',
+        path: '/gift-vouchers'
+      },
+
+    ]
+
   return (
     <footer className="site-footer" ref={footerRef}>
       {/* ── MAIN GRID ── */}
@@ -192,7 +225,7 @@ export default function Footer() {
 
         {/* Brand */}
         <div className="footer-brand" ref={brandRef}>
-          <div>
+          <div className="brand-contentWRPR">
             <div className="brand-logo">
               <img src={BrotherByteLOGO} />
             </div>
@@ -201,44 +234,44 @@ export default function Footer() {
               ancient technique, and the joy of gathering around good food.
             </p>
           </div>
-          <div className="social-row">
+          {/* <div className="social-row">
             {SOCIAL_ICONS.map((s) => (
               <a key={s.label} href="#" className="social-btn" aria-label={s.label} title={s.label}>
                 {s.icon}
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* Explore */}
         <div className="footer-col" ref={el => colRefs.current[0] = el}>
           <h3 className="col-title">Explore</h3>
           <ul className="col-links">
-            {['Our Menu', 'Chef\'s Table', 'Wine Cellar', 'Private Dining', 'Seasonal Specials', 'Cooking Classes'].map(l => (
-              <li key={l}>
-                <a href="#">
+            {menuLists.map((item, index) => (
+              <li key={index}>
+                <NavLink to={item.path}>
                   <span className="link-arrow">›</span>
-                  {l}
-                </a>
+                  {item.menu}
+                </NavLink>
               </li>
             ))}
           </ul>
         </div>
 
         {/* Visit */}
-        <div className="footer-col" ref={el => colRefs.current[1] = el}>
+        {/* <div className="footer-col" ref={el => colRefs.current[1] = el}>
           <h3 className="col-title">Visit</h3>
           <ul className="col-links">
-            {['Make a Reservation', 'Gift Vouchers', 'Events & Catering', 'Group Bookings', 'Takeaway Orders', 'Find Us'].map(l => (
-              <li key={l}>
-                <a href="#">
+            {visitLists.map((item, index) => (
+              <li key={item.index}>
+                <NavLink to={item.path}>
                   <span className="link-arrow">›</span>
-                  {l}
-                </a>
+                  {item.menu}
+                </NavLink>
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         {/* Newsletter */}
         <div className="footer-col footer-newsletter-inline" ref={el => colRefs.current[2] = el}>
@@ -261,7 +294,7 @@ export default function Footer() {
       {/* ── BOTTOM BAR ── */}
       <div className="footer-bottom" ref={bottomRef}>
         <p className="footer-copy">
-          © 2026 <a href="#">BrotherBytes</a>. All rights reserved.
+          © 2026 <NavLink to="/">BrotherBytes</NavLink>. All rights reserved.
         </p>
         <ul className="footer-legal">
           {['Privacy Policy', 'Cookie Policy', 'Accessibility', 'Terms'].map(l => (

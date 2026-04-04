@@ -1,9 +1,3 @@
-/* ============================================
-   SAVORA FOOD FOOTER — EXTERNAL STYLESHEET
-   ============================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&display=swap');
-
 
 /* ──────────── PAGE SHELL (demo) ──────────── */
 .page-shell {
@@ -26,7 +20,12 @@
   padding: 6rem 2rem;
   border-bottom: 1px solid var(--border);
 }
-
+.brand-contentWRPR{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 /* ──────────── FOOTER ──────────── */
 .site-footer {
   position: relative;
@@ -185,9 +184,9 @@
 .footer-grid {
   position: relative;
   z-index: 2;
-  padding: 4rem 6% 3rem;
+  padding: 1.5rem 6% 1rem;
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-template-columns:0.5fr 1fr .5fr;
   gap: 3rem 2rem;
   border-bottom: 1px solid #222222;
 }
@@ -195,7 +194,6 @@
 
 .brand-logo img{
   width: 100px;
-  margin-bottom: 20px;
 }
 
 .brand-logo span { color: var(--amber); }
@@ -206,7 +204,6 @@
   line-height: 1.7;
   color: var(--muted);
   max-width: 260px;
-  margin-bottom: 2rem;
 }
 
 /* Social icons */
@@ -263,7 +260,6 @@
 .col-links {
   list-style: none;
   display: flex;
-  flex-direction: column;
   gap: 0.8rem;
 }
 
@@ -419,7 +415,7 @@
 .footer-bottom {
   position: relative;
   z-index: 2;
-  padding: 1.6rem 6%;
+  padding: .4rem 6%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -499,6 +495,17 @@
 .anim-hidden-scale {
   opacity: 0;
   transform: scale(0.88);
+}
+
+.col-links li .active{
+  color: var(--cream);
+    padding-left: 0.4rem;
+}
+.col-links li .active .link-arrow {
+    opacity: 1;
+    transform: translateX(0);
+} .site-footer input:-webkit-autofill, .site-footer input:-webkit-autofill:hover, .site-footer input:-webkit-autofill:focus, .site-footer textarea:-webkit-autofill, .site-footer select:-webkit-autofill{
+    -webkit-text-fill-color: var(--cream) !important;
 }
 
 /* ──────────── RESPONSIVE ──────────── */

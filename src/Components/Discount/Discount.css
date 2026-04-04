@@ -5,7 +5,7 @@
     margin-top: 100px;
     width: 100%;
     background: linear-gradient(180deg,var(--amber)0%,var(--gold-pale) 100%);
-    aspect-ratio: 5 / 1;
+    min-height: 340px;
     padding: 10px;
     border-radius: 10px;
 
@@ -34,6 +34,7 @@
 }
 .textDiscountSection h1{
     font-size: 5svw;
+    line-height: 5svw;
     font-weight: 900;
     color: #84b522;
     margin-bottom: 10px;
@@ -46,33 +47,100 @@
     margin-top: -50px;
     text-transform: uppercase;
 }
-.inputSection{
+.DiscountMain .inputSection{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
 }
-.MuiTextField-root{
+.DiscountMain .MuiTextField-root{
     width: 80%;
 }
-.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+.DiscountMain .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
     color: var(--amber) !important;
 }
-.css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+.DiscountMain .css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
     border-color: var(--amber) !important;
 }
-.css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input{
+.DiscountMain .css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input{
     color: #84b522 !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
 }
-.MuiButtonBase-root{
+.DiscountMain .MuiButtonBase-root{
     background: var(--amber) !important;
     color: #ffffff !important;
     height: 100%;
     width: 20%;
     border-radius: 30px !important;
 
+}
+.coponesWrpr{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.couponsMapWrpr{
+    background: #3fbeab36;
+    padding: 20px;
+    padding-left: 3.5svw;
+    border: #268a7b71 solid 1px;
+    border-radius: 10px;
+    position: relative;
+    min-height: 150px;
+}
+.couponsMapWrpr:nth-child(2){
+    background: #be3f8736;
+    border: #8a265871 solid 1px;
+}
+.couponsMapWrpr:nth-child(3){
+    background: #be8f3f36;
+    border: #8a672671 solid 1px;
+}
+.couponsMapWrpr:nth-child(2) h1{
+    color: #8a2658;
+}
+.couponsMapWrpr:nth-child(3) h1{
+    color: #8a6726;
+}
+.couponsMapWrpr h1{
+    font-size: 3svw;
+    line-height: 50px;
+    position: absolute;
+    left:-1.1svw;
+    top: 50%;
+    transform: translateY(-50%) rotate(270deg);
+    color: #268a7b;
+    text-transform: uppercase;
+    margin: 0;
+}
+.couponsMapWrpr h2 {
+    font-size: 1.3svw;
+    font-weight: 400;
+    color: #0b5f51;
+    margin-top: unset;
+    text-transform: uppercase;
+}
+.couponsMapWrpr:nth-child(3) h2 {
+    color: #8a6726;
+}
+.couponsMapWrpr:nth-child(2) h2 {
+    color: #8a2658;
+}
+
+.couponsMapWrpr h3 {
+    font-size: 1.1svw;
+    font-weight: 400;
+    color: #6fa700;
+    margin-top: unset;
+    text-transform: uppercase;
+}
+.couponsMapWrpr h4 {
+    font-size: .9svw;
+    font-weight: 400;
+    color: #d40000;
+    margin-top: unset;
+    text-transform: uppercase;
 }
 @media screen and (max-width: 1499px) {
     .imageDiscountSection img{
@@ -82,6 +150,9 @@
         font-size: 4.5svw;
         margin-bottom: 20px;
     }
+    .couponsMapWrpr h1{
+    font-size: 3svw;
+    }
 }
 @media screen and (max-width: 1299px) {
     .imageDiscountSection img{
@@ -90,6 +161,9 @@
     .textDiscountSection h1{
         font-size: 4svw;
         margin-bottom: 30px;
+    }
+    .couponsMapWrpr h1{
+    font-size: 3svw;
     }
 }
 @media screen and (max-width: 1199px){
@@ -132,6 +206,9 @@
     }
 }
 @media screen and (max-width: 699px){
+    .DiscountMain .MuiButtonBase-root{
+        width: 120px;
+    }
     .textDiscountSection h1 {
         font-size: 40px;
         line-height: 50px;
@@ -154,7 +231,7 @@
 @media screen and (max-width: 499px){
     .textDiscountSection h1 {
         font-size: 30px;
-        line-height: 40px;
+        line-height: 30px;
     }
     .textDiscountSection h2 {
     font-size: 18px;

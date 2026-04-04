@@ -170,17 +170,17 @@ export default function MenuHome() {
             {/* Body */}
             <div className="fs-card-body">
               <div className="fs-card-meta">
-                <span className="fs-card-tag">{food.tag}</span>
-                <span className="fs-card-dot" />
-                <span className="fs-card-time">⏱ {food.time}</span>
+                {/* <span className="fs-card-tag">{food.tag}</span> */}
+                {/* <span className="fs-card-dot" /> */}
+                {/* <span className="fs-card-time">⏱ {food.time}</span> */}
               </div>
               <h2 className="fs-card-name">{food.MenuName}</h2>
               <p className="fs-card-desc">{food.desc}</p>
               <div className="fs-card-footer">
                 <div>
-                  <div className="fs-card-price">
+                  {/* <div className="fs-card-price">
                     <sup>₹</sup>{food.price}
-                  </div>
+                  </div> */}
                   <div className="fs-card-stars">
                     ★★★★★ <span>({food.reviews})</span>
                   </div>

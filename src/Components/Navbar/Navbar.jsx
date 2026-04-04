@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import Logo from '../../assets/BrotherByteLOGO.png'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const NAV_LINKS = [
     { label: "Home", href: "/" },
     { label: "Menu", href: "/menu" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
+    { label: "Group Order", href: "/group-order" },
 ];
 
 export default function Navbar() {
@@ -37,6 +39,8 @@ export default function Navbar() {
         document.body.style.overflow = menuOpen ? "hidden" : "";
         return () => { document.body.style.overflow = ""; };
     }, [menuOpen]);
+
+    const navigate = useNavigate();
 
     return (
         <>
@@ -75,12 +79,7 @@ export default function Navbar() {
                         </button>
 
                         {/* CTA Button */}
-                        <a href="#" className="nav-cta">
-                            Get Started
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                <path d="M2 10L10 2M10 2H4M10 2V8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
-                        </a>
+                        <Button variant="contained" className="SignInBTNav" onClick={() => navigate("/sign-in")}>Sign In</Button>
 
                         {/* Hamburger (mobile) */}
                         <button

@@ -1,3 +1,84 @@
 .MenuMain .fs-section{
     padding: 80px 24px 100px;
 }
+ .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    }
+
+  .modalContent{
+    background: #fff;
+    min-width: 600px;
+    min-height: 220px;
+    padding:20px;
+    border-radius: 20px;
+    text-align: center;
+    border: var(--amber) solid 2px;
+  }
+    .modalContent h3{
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #84b524;
+    }
+    .modalContent h3 span{
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 60%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .MenuMain .fs-section{
+      background: #fff;
+    }
+    .MenuMain {
+    background: #000000;
+    min-height: 76.1svh;
+    }
+    .modalContent .css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+      border-color: var(--amber) !important;
+    }
+    .modalContent .css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+      color: var(--amber) !important;
+    }
+    .modalContent button {
+      background: var(--amber);
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 400;
+      transition: background 0.3s ease;
+      color: #fff;
+    }
+    .css-1tktgsa-MuiPaper-root-MuiPopover-paper-MuiMenu-paper{
+      max-height: calc(50% - 96px) !important;
+      padding: 0 8px !important;
+      transition: all 0.3s ease;
+    }
+    .css-1rju2q6-MuiButtonBase-root-MuiMenuItem-root.Mui-focusVisible , .css-1rju2q6-MuiButtonBase-root-MuiMenuItem-root.Mui-selected{
+      background-color: #d32f2f42 !important;
+      border-radius: 5px !important;
+      transition: all 0.3s ease;
+      border: #ff1d1d42 solid 1px !important;
+    }
+    .css-1rju2q6-MuiButtonBase-root-MuiMenuItem-root:hover {
+      background-color: rgb(255 10 10 / 10%);
+      border: #d32f2f72 solid 1px;
+      border-radius: 5px;
+      transform: scale(1.02);
+      transition: all 0.3s ease;
+    }

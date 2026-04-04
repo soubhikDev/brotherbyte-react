@@ -1,0 +1,87 @@
+.bulk-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+  border: var(--amber) solid 2px;
+}
+
+.bulk-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.bulk-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+
+.bulk-form button {
+    background: var(--amber) !important;
+    color: #ffffff !important;
+    border-radius: 30px !important;
+    font-size: 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-self: center !important;
+    line-height: 18px !important;
+    height: 35px;
+}
+.bulk-form .css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline ,
+.bulk-form .css-xrmkj5-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: var(--amber) !important;
+}
+
+.bulk-form button:hover {
+  background: #0056b3;
+}
+.groupOrderSub{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+    background: url(../../assets/SignINBG.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100svh;
+}
+.bulkFoodTEXT{
+    max-width: 500px;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    background: #ffffff8f;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-left: -10px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--amber);
+}
+.bulkFoodTEXT h1{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+.bulkFoodTEXT p{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: justify;
+}
+.groupOrder .PageHeroMain{
+        box-shadow: #000 0px 56px 380px 100px;
+}

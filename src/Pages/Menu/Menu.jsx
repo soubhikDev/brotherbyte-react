@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import PageHero from '../../Components/PageHeros/PageHero'
 import './Menu.css'
 import ThaliMenuListHero from '../../assets/ThaliMenuListHero.png'
 import CardSection from '../../Components/CardSection/CardSection'
+import { Button, FormControl, InputLabel, MenuItem, Select } from '@mui/material'
+import { LocationsData } from '../../../LocationsData'
+
 
 export default function Menu() {
     const PageHeroData = {
@@ -12,14 +15,75 @@ export default function Menu() {
       useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
+
+        const [showModal, setShowModal] = useState(true);
+        const [selected, setSelected] = useState("");
+
+        useEffect(() => {
+          // Page load pe modal open
+          setShowModal(true);
+        }, []);
+      
+        const handleContinue = () => {
+          if (selected) {
+            setShowModal(false);
+          }
+        };
+
     
   return (
     <>
         <div className="MenuMain">
           <PageHero PageHeroData={PageHeroData} />
-            <div className="common_width">
+            
+              {showModal && (
+                <div className='modal'>
+                  <div className='modalContent'>
+                    <h3>Select City for <span>food Delivery</span></h3>
+
+                    {/* <select
+                      value={selected}
+                      onChange={(e) => setSelected(e.target.value)}
+                    >
+                      <option value="">-- Select --</option>
+                      <option value="1">Option 1</option>
+                      <option value="2">Option 2</option>
+                    </select> */}
+
+                    <FormControl fullWidth>
+                      <InputLabel id="demo-simple-select-label">Select Location</InputLabel>
+                      <Select
+                        labelId="demo-simple-select-label"
+                        id="demo-simple-select"
+                        value={selected}
+                        label="Select Location"
+                        onChange={(e) => setSelected(e.target.value)}
+                      >
+                       {LocationsData.map((item, index) => (
+                        <MenuItem key={index} value={item.name}>
+                          {item.name}
+                        </MenuItem>
+                       ))}
+                      </Select>
+                    </FormControl>
+
+                    <Button variant="contained"
+                      onClick={handleContinue}
+                      disabled={!selected}
+                      style={{ marginTop: "10px" }}
+                    >
+                      Continue
+                    </Button>
+                  </div>
+                </div>
+              )}
+
+              {!showModal && (
                 <CardSection />
-            </div>
+              )}
+
+                
+            
         </div>
     </>
   )

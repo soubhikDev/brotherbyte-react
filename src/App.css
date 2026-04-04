@@ -113,3 +113,18 @@ h6 {
     margin: 0 auto;
     max-width: 1700px;
 }
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, textarea:-webkit-autofill, select:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0 1000px rgb(255 255 255 / 0%) inset !important;
+    -webkit-text-fill-color: var(--text-300) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+    color: var(--amber) !important;
+}
+.css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: var(--amber) !important;
+}
+.css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+.css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline{
+    border-color: var(--amber) !important;
+}

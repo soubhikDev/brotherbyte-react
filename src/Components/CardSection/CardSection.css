@@ -543,8 +543,8 @@
 }
 
 .fs-cart-item-img {
-  width: 64px;
-  height: 64px;
+    width: 100px;
+    aspect-ratio: 1 / 1;
   border-radius: 10px;
   object-fit: cover;
   flex-shrink: 0;
@@ -715,4 +715,17 @@
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+}
+.checkoutEnabled{
+      background: linear-gradient(135deg, #1f670b, #37c901);
+          color: #fff;
+    border: none;
+    border-radius: 14px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+        width: 100%;
+    padding: 15px;
 }

@@ -17,15 +17,9 @@ function UserDetails() {
 
       <div className="card__body">
         {/* First Name */}
-        <div className="form-group">
-          <label htmlFor="firstName">First Name</label>
-          <input id="firstName" type="text" placeholder="Rahul" />
-        </div>
-
-        {/* Last Name */}
-        <div className="form-group">
-          <label htmlFor="lastName">Last Name</label>
-          <input id="lastName" type="text" placeholder="Sharma" />
+        <div className="form-group full-width">
+          <label htmlFor="firstName">Name</label>
+          <input id="firstName" type="text" placeholder="Rahul Sharma" />
         </div>
 
         {/* Email */}
@@ -89,11 +83,11 @@ function OrderDetails({ cartItems, updateQty }) {
                 <span className="orderItem__tag">{item.time}</span>
               </div>
               <div className="orderItem__qty-price">
-                <div className="qty-control">
+                {/* <div className="qty-control">
                   <button className="qty-btn" onClick={() => updateQty(item.id, -1)}>−</button>
                   <span className="qty-num">{item.quantity}</span>
                   <button className="qty-btn" onClick={() => updateQty(item.id, +1)}>+</button>
-                </div>
+                </div> */}
                 <div className="orderItem__price">
                   <span className="price-original">₹{(item.price).toLocaleString()}</span>
                   <span className="price-final">₹{(item.price * item.quantity).toLocaleString()}</span>
@@ -123,7 +117,7 @@ function OrderSummary({cartItems}) {
   const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0)
   const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0)
   const discount    = 0
-  const gstRate     = 0.18
+  const gstRate     = 0.05
   const deliveryFee = 0
   const couponDiscount = appliedCoupon
     ? typeof appliedCoupon.off === 'string' && appliedCoupon.off.includes('%')
@@ -238,7 +232,7 @@ function OrderSummary({cartItems}) {
 
           <div className="summary-row">
             <span className="label">
-              GST (18%)
+              GST (5%)
               <span className="info-tip">i</span>
             </span>
             <span className="value gst">+ ₹{gstAmount.toLocaleString()}</span>
@@ -305,7 +299,7 @@ export default function Payment() {
 
     
     const PageHeroData = {
-            title: 'Payment',
+            title: 'Order Process',
             img: ChickenLolipop
           }
   return (

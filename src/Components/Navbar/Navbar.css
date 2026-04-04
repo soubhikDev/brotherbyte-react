@@ -80,7 +80,17 @@
     background: rgba(255, 255, 255, 0.782);
     /* font-weight: 700; */
 }
-
+.SignInBTNav{
+    background: var(--amber) !important;
+    color: #ffffff !important;
+    border-radius: 30px !important;
+    font-size: 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-self: center !important;
+    line-height: 18px !important;
+    height: 35px;
+}
 .nav-links .link-dot {
     width: 4px;
     height: 4px;
